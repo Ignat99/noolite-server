@@ -4,14 +4,14 @@
  */
 
 
-var express = require('express');
-var app =  module.exports = express();
-
-var routesPayments = require('./routes/payments')
+var express = require('express')
+  , routesPayments = require('./routes/payments')
   , routesApi = require('./routes/api')
   , routesIndex = require('./routes/index')
   , http = require('http')
   , path = require('path');
+
+var app =  module.exports = express();
 
 
 app.configure(function(){
