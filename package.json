@@ -2,6 +2,15 @@
   "name": "noolite-server",
   "version": "0.0.1",
   "private": true,
+  "homepage": "https://github.com/Ignat99/noolite-server",
+  "author": {
+    "name": "Ignat Ignatov",
+    "email": "ignat99@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ignat99/noolite-server.git"
+  },
   "scripts": {
     "start": "node app"
   },
