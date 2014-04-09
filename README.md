@@ -1,12 +1,12 @@
 noolite-server
 ==============
 
-noolite server with ripple network noolite-server.herokuapp.com
+noolite server with ripple network http://noolite-server.herokuapp.com
 
-  npm install
-  heroku create <name of your noolite-server>
-  git push heroku master
-  heroku logs -t
+    npm install
+    heroku create <name of your noolite-server>
+    git push heroku master
+    heroku logs -t
 
 API
 ====
