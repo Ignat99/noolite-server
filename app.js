@@ -4,8 +4,8 @@
  */
 
 var express = require('express')
-  , routes = require('./routes')
   , api = require('./routes/api')
+  , routes = require('./routes')
   , payments = require('./routes/payments')
   , http = require('http')
   , path = require('path');
