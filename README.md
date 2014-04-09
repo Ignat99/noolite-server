@@ -1,8 +1,12 @@
 noolite-server
 ==============
 
-noolite server with ripple network bitpay-yeomen-express-basic.herokuapp.com
+noolite server with ripple network noolite-server.herokuapp.com
 
+  npm install
+  heroku create <name of your noolite-server>
+  git push heroku master
+  heroku logs -t
 
 API
 ====
