@@ -4,14 +4,15 @@
  */
 
 
-var express = require('express')
-  , payments = require('/app/routes/payments')
-  , api = require('/app/routes/api')
-  , index = require('/app/routes/index')
+var express = require('express');
+var app =  module.exports = express();
+
+var routesPayments = require('./routes/payments')
+  , routesApi = require('./routes/api')
+  , routesIndex = require('./routes/index')
   , http = require('http')
   , path = require('path');
 
-var app =  module.exports = express();
 
 app.configure(function(){
   app.set('port', process.env.PORT || 3000);
@@ -30,15 +31,15 @@ app.configure('development', function(){
 });
 
 
-app.get('/', index.index);
-app.post('/payments/:id', payments.notification);
+app.get('/', routesIndex.index);
+app.post('/payments/:id', routesPayments.notification);
 
 // JSON API
-app.get('/switches', api.switches);
-app.get('/switches/:id', api.switch);
-app.post('/switches', api.addSwitch);
-app.put('/switches/:id', api.editSwitch);
-app.delete('/switches/:id', api.deleteSwitch);
+app.get('/switches', routesApi.switches);
+app.get('/switches/:id', routesApi.switch);
+app.post('/switches', routesApi.addSwitch);
+app.put('/switches/:id', routesApi.editSwitch);
+app.delete('/switches/:id', routesApi.deleteSwitch);
 
 
 http.createServer(app).listen(app.get('port'), function(){
