@@ -5,10 +5,10 @@
 
 
 var express = require('express')
-  , routes = require('./routes')
+  , routesIndex = require('./routes')
   , routesPayments = require('./routes/payments')
   , routesApi = require('./routes/api')
-  , routesIndex = require('./routes/index')
+  , routesIndexIndex = require('./routes/index')
   , http = require('http')
   , path = require('path');
 
@@ -32,7 +32,7 @@ app.configure('development', function(){
 });
 
 
-app.get('/', routesIndex.index);
+app.get('/', routesIndexIndex.index);
 app.post('/payments/:id', routesPayments.notification);
 
 // JSON API
