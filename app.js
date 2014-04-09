@@ -6,7 +6,6 @@
 
 var express = require('express')
   , api = require('./routes/api')
-  , payments = require('./routes/payments')
   , index = require('./routes/index')
   , http = require('http')
   , path = require('path');
@@ -32,7 +31,7 @@ app.configure('development', function(){
 
 app.get('/', index.index);
 
-//app.post('/payments/:id', payments.notification);
+// app.post('/payments/:id', payments.notification);
 
 // JSON API
 app.get('/switches', api.switches);
