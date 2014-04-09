@@ -5,6 +5,7 @@
 
 
 var express = require('express')
+  , routes = require('./routes')
   , routesPayments = require('./routes/payments')
   , routesApi = require('./routes/api')
   , routesIndex = require('./routes/index')
