@@ -5,7 +5,7 @@
 
 var express = require('express')
   , api = require('./routes/api')
-  , routes = require('./routes')
+  , routes = require('./routes') 
   , payments = require('./routes/payments')
   , http = require('http')
   , path = require('path');
@@ -15,6 +15,7 @@ var app = express();
 app.configure(function(){
   app.set('port', process.env.PORT || 3000);
   app.set('views', __dirname + '/views');
+  app.set('routes', __dirname + '/routes');
   app.set('view engine', 'jade');
   app.use(express.favicon());
   app.use(express.logger('dev'));
