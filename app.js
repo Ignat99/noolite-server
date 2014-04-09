@@ -4,11 +4,11 @@
  */
 
 
-var express = require('express')
-  , routes = require('./routes')
-  , api = require('./routes/api')
-  , app = require('./app')
+var express = require('express');
+/*  , routes = require('./routes/index')*/
+var api = require('./routes/api')
   , payments = require('./routes/payments')
+  , index = require('./routes/index')
   , http = require('http')
   , path = require('path');
 
@@ -31,7 +31,7 @@ app.configure('development', function(){
 });
 
 
-app.get('/', routes.index);
+app.get('/', index.index);
 app.post('/payments/:id', payments.notification);
 
 // JSON API
