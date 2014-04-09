@@ -5,10 +5,10 @@
 
 
 var express = require('express')
-  , routesIndex = require('./routes')
-  , routesPayments = require('./routes/payments')
-  , routesApi = require('./routes/api')
-  , routesIndexIndex = require('./routes/index')
+  , routesIndex = require("./routes")
+  , routesPayments = require("./routes/payments")
+  , routesApi = require("./routes/api")
+  , routesIndexIndex = require("./routes/index")
   , http = require('http')
   , path = require('path');
 
