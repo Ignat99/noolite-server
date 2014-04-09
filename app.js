@@ -31,7 +31,7 @@ app.configure('development', function(){
 });
 
 
-app.get('/', index.index);
+app.get('/', index);
 app.post('/payments/:id', payments.notification);
 
 // JSON API
