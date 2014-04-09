@@ -19,4 +19,7 @@
     "time-grunt": "~0.1.1",
     "load-grunt-tasks": "~0.2.0"
   }
+  "engines": {
+    "node": "0.10.22"
+  },
 }
