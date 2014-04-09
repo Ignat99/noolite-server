@@ -11,9 +11,9 @@ noolite server with ripple network http://noolite-server.herokuapp.com
 API
 ====
 
-node app.js
-http://localhost:3000
-http://localhost:3000/switches/0
+    node routes/app.js
+    http://localhost:3000
+    http://localhost:3000/switches/0
 
 {
   "id": "0",
@@ -25,7 +25,7 @@ http://localhost:3000/switches/0
 }
 
 
-http://localhost:3000/switches/1
+    http://localhost:3000/switches/1
 
 {
   "id": "1",
@@ -36,16 +36,22 @@ http://localhost:3000/switches/1
   "status": " "
 }
 
-#!/bin/bash
-noolite -api -on_ch 1
+bush script nool1
+==================
+
+    #!/bin/bash
+    noolite -api -on_ch 1
 
 
-#!/bin/bash
-noolite -api -off_ch 1
+bash script nool2
+==================
+
+    #!/bin/bash
+    noolite -api -off_ch 1
 
 
-heroku create
-git push heroku master
+Run on localhost
+=================
 
 foreman start
 
