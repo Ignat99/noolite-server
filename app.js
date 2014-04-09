@@ -30,8 +30,9 @@ app.configure('development', function(){
 });
 
 
-app.get('/', index);
-app.post('/payments/:id', payments.notification);
+app.get('/', index.index);
+
+//app.post('/payments/:id', payments.notification);
 
 // JSON API
 app.get('/switches', api.switches);
