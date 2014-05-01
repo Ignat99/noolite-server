@@ -35,6 +35,7 @@ app.get('/', routesIndexIndex.index);
 app.post('/payments/:id', routesPayments.notification);
 
 // JSON API
+app.post('/ferreteriazoko', routesApi.ferreteriazoko);
 app.get('/switches', routesApi.switches);
 app.get('/switches/:id', routesApi.switch);
 app.post('/switches', routesApi.addSwitch);

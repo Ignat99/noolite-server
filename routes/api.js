@@ -1,7 +1,7 @@
 //execute commands
 var util = require('util')
 var exec = require('child_process').exec;
- 
+var mailer = require('nodemailer'); 
 
 
 var sleep = require('sleep');
@@ -18,7 +18,10 @@ var data = [
     }   
   ];
 
+
+
 // GET
+
 exports.switches = function (req, res) {
   console.log('Getting switches.');
   var switches = [];
@@ -65,6 +68,44 @@ ls1.stdout.on('data', function (data) {
 };
 
 // POST
+exports.ferreteriazoko = function (req, res) {
+   var bodyFz = req.body;
+
+    // Use Smtp Protocol to send Email
+    var smtpTransport = mailer.createTransport("SMTP",{
+        service: "Gmail",
+        auth: {
+            user: "ignat99@gmail.com",
+            pass: ""
+        }
+    });
+
+    var mail = {
+        from: "Ignat Ignatov <ignat99@gmail.com>",
+        to: "ferreteriazoko@gmail.com",
+        subject: req.body['myemail'],
+        text: req.body['myemail'],
+        html: "<b>" + req.body['myemail'] + "</b>"
+    }
+
+    smtpTransport.sendMail(mail, function(error, response){
+        if(error){
+            console.log(error);
+        }else{
+            console.log("Message sent: " + response.message);
+        }
+
+        smtpTransport.close();
+    });
+
+
+   console.log(JSON.stringify(bodyFz));
+   console.log('Getting message from client of ferreteriazoko : req.body.myemail : ' + req.body['myemail']);
+   //data.push(bodyFz);
+   res.send(200);
+};
+
+
 exports.addSwitch = function (req, res) {
   var newSwitch = req.body;
   newSwitch.id=data.length;
