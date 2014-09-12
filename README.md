@@ -7,6 +7,10 @@ noolite server with API for control light:  http://noolite-server.herokuapp.com
     heroku create <name of your noolite-server>
     git push heroku master
     heroku logs -t
+    
+SUPPORT
+=======
+[![tip for next commit](https://tip4commit.com/projects/952.svg)](https://tip4commit.com/github/Ignat99/noolite-server)
 
 API
 ====
